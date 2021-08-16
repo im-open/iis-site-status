@@ -33,7 +33,7 @@ $script = {
         Exit
     }
 
-    Return "$($website.Name): $website.State"
+    Return "$($website.Name): $($website.State)"
 }
 
 $script_result = Invoke-Command -ComputerName $server `
