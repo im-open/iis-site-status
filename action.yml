@@ -1,4 +1,4 @@
-name: 'App Pool Action'
+name: 'IIS Site Status'
 
 description: 'This action gets the status an On-Prem IIS website'
 
