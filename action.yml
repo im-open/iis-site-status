@@ -1,6 +1,6 @@
 name: 'IIS Site Status'
 
-description: 'This action gets the status an On-Prem IIS website'
+description: 'This action gets the status of an On-Prem IIS website'
 
 inputs:
   server:

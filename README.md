@@ -1,6 +1,6 @@
-# IIS Site Action
+# IIS Site Status
 
-This action gets the status an On-Prem IIS website
+This action gets the status of an On-Prem IIS website
 
 ## Index <!-- omit in toc -->
 
