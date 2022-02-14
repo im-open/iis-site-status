@@ -9,7 +9,7 @@ This action gets the status of an On-Prem IIS website
 - [Prerequisites](#prerequisites)
 - [Example](#example)
 - [Contributing](#contributing)
-	- [Incrementing the Version](#incrementing-the-version)
+  - [Incrementing the Version](#incrementing-the-version)
 - [Code of Conduct](#code-of-conduct)
 - [License](#license)
 
@@ -21,7 +21,7 @@ This action gets the status of an On-Prem IIS website
 | `website-name`             | true        | The name of the website to perform action on |
 | `service-account-id`       | true        | The service account name                     |
 | `service-account-password` | true        | The service account password                 |
-| `server-public-key`        | true        | Path to remote server public ssl key         |
+| `server-cert-path`         | false       | Path to remote server public ssl cert        |
 
 ## Outputs
 
@@ -77,20 +77,18 @@ jobs:
    env:
       server: 'iis-server.domain.com'
       website-name: 'Default Web Site'
-      cert-path: './server-cert'
 
    steps:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Get Status
       id: get-status
-      uses: 'im-open/iis-site-status@v1.0.0'
+      uses: 'im-open/iis-site-status@v2.0.0'
       with:
         server: ${{ env.server }}
         website-name: ${{ env.website-name }}
         service-account-id: ${{ secrets.iis_admin_user }}
         service-account-password: ${{ secrets.iis_admin_password }}
-        server-public-key: ${{ env.cert-path }}
     - name: Display Status
         shell: powershell
         run: Write-Host ${{ steps.get-status.outputs.website-status }}
