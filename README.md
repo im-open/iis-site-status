@@ -15,13 +15,13 @@ This action gets the status of an On-Prem IIS website
 
 ## Inputs
 
-| Parameter                  | Is Required | Description                                  |
-| -------------------------- | ----------- | -------------------------------------------- |
-| `server`                   | true        | The name of the target server                |
-| `website-name`             | true        | The name of the website to perform action on |
-| `service-account-id`       | true        | The service account name                     |
-| `service-account-password` | true        | The service account password                 |
-| `server-cert-path`         | false       | Path to remote server public ssl cert        |
+| Parameter                  | Is Required | Description                                                                                                      |
+| -------------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------- |
+| `server`                   | true        | The name of the target server                                                                                    |
+| `website-name`             | true        | The name of the website to perform action on                                                                     |
+| `service-account-id`       | true        | The service account name                                                                                         |
+| `service-account-password` | true        | The service account password                                                                                     |
+| `server-cert-path`         | false       | Path to remote server public ssl cert, only necessary if the cert is not already installed on the actions runner |
 
 ## Outputs
 
