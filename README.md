@@ -24,9 +24,9 @@ This action gets the status of an On-Prem IIS website
 
 ## Outputs
 
-| Parameter        | Description               | Expected Result     |
-| ---------------- | ------------------------- | ------------------- |
-| `website-status` | The status of the website | `[Started|Stopped]` |
+| Parameter        | Description               | Expected Result              |
+| ---------------- | ------------------------- | ---------------------------- |
+| `website-status` | The status of the website | [`Started` &#124; `Stopped`] |
 
 ## Prerequisites
 
@@ -82,7 +82,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Get Status
       id: get-status
-      uses: 'im-open/iis-site-status@v2.0.0'
+      uses: 'im-open/iis-site-status@v2.0.2'
       with:
         server: ${{ env.server }}
         website-name: ${{ env.website-name }}
