@@ -24,9 +24,9 @@ This action gets the status of an On-Prem IIS website
 
 ## Outputs
 
-| Parameter        | Description               | Expected Result |
-| ---------------- | ------------------------- | --------------- |
-| `website-status` | The status of the website | `[Started       | Stopped]` |
+| Parameter        | Description               | Expected Result              |
+| ---------------- | ------------------------- | ---------------------------- |
+| `website-status` | The status of the website | [`Started` &#124; `Stopped`] |
 
 ## Prerequisites
 
