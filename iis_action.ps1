@@ -39,10 +39,10 @@ $script_result = Invoke-Command -ComputerName $server `
 
 If ($script_result -and $script_result -eq 1) {
     Write-Output "IIS Site Status Error"
-    Write-Output "website-status=IIS Site Status Error" >> $GITHUB_OUTPUT
+    "website-status=IIS Site Status Error" >> $env:GITHUB_OUTPUT
     Exit 1
 }
 else {
     Write-Output "$display_action_past_tense."
-    Write-Output "website-status=$script_result" >> $GITHUB_OUTPUT
+    "website-status=$script_result" >> $env:GITHUB_OUTPUT
 }
