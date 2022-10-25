@@ -82,7 +82,7 @@ jobs:
       uses: actions/checkout@v3
     - name: Get Status
       id: get-status
-      uses: 'im-open/iis-site-status@v2.0.2'
+      uses: 'im-open/iis-site-status@v2.1.0'
       with:
         server: ${{ env.server }}
         website-name: ${{ env.website-name }}
