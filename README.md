@@ -82,7 +82,8 @@ jobs:
       uses: actions/checkout@v3
     - name: Get Status
       id: get-status
-      uses: 'im-open/iis-site-status@v2.1.0'
+      # You may also reference the major or major.minor version
+      uses: im-open/iis-site-status@v2.1.1
       with:
         server: ${{ env.server }}
         website-name: ${{ env.website-name }}
@@ -132,6 +133,5 @@ Copyright &copy; 2021, Extend Health, LLC. Code released under the [MIT license]
 <!-- Links -->
 
 [git-version-lite]: https://github.com/im-open/git-version-lite
-[powershell remoting over https with a self-signed ssl certificate]: https://4sysops.com/archives/powershell-remoting-over-https-with-a-self-signed-ssl-certificate
 [wsman]: https://docs.microsoft.com/en-us/windows/win32/winrm/ws-management-protocol
 [winrm]: https://docs.microsoft.com/en-us/windows/win32/winrm/about-windows-remote-management
