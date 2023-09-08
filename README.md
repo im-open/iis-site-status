@@ -1,3 +1,7 @@
+# DEPRECATED
+
+This action was deprecated on 2023-09-08 and will no longer receive support or updates.
+
 # IIS Site Status
 
 This action gets the status of an On-Prem IIS website
